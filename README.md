@@ -1,7 +1,8 @@
 # w3SaaS Smart Wallet - Hedera Agent
 
 <div align="center">
-  <img src="./repocover.png" alt="W3 SaaS - Your Key to Web3" width="100%">
+
+![W3 SaaS - Your Key to Web3](./images/repocover.png.png)
   
 ![Hedera](https://img.shields.io/badge/Powered%20by-Hedera-3ECF8E?style=for-the-badge&logo=hedera&logoColor=white)
 ![Discord](https://img.shields.io/badge/Discord-Integration-5865F2?style=for-the-badge&logo=discord&logoColor=white)
