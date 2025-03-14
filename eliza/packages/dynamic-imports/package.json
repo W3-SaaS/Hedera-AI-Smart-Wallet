@@ -1,0 +1,8 @@
+{
+    "name": "dynamic-imports",
+    "type": "module",
+    "main": "src/index.ts",
+    "dependencies": {
+        "dynamic-imports": "file:"
+    }
+}
