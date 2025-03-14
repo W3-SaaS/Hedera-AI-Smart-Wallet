@@ -1,16 +1,8 @@
-<!-- 
-██╗  ██╗███████╗██████╗ ███████╗██████╗  █████╗      █████╗ ██████╗ ██╗
-██║  ██║██╔════╝██╔══██╗██╔════╝██╔══██╗██╔══██╗    ██╔══██╗██╔══██╗██║
-███████║█████╗  ██║  ██║█████╗  ██████╔╝███████║    ███████║██████╔╝██║
-██╔══██║██╔══╝  ██║  ██║██╔══╝  ██╔══██╗██╔══██║    ██╔══██║██╔═══╝ ██║
-██║  ██║███████╗██████╔╝███████╗██║  ██║██║  ██║    ██║  ██║██║     ██║
-╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝     ╚═╝
-                                                                       
--->
-
-# w3SaaS Smart Wallet - Hedera Agent API
+# 🌐 w3SaaS Smart Wallet - Hedera Agent API
 
 <div align="center">
+  <img src="https://img.shields.io/badge/Hedera-Agent%20API-3ECF8E?style=for-the-badge&logo=hedera&logoColor=white" alt="Hedera API" width="300"/>
+  <br/>
   
 ![API Version](https://img.shields.io/badge/API%20Version-1.0-blue?style=for-the-badge)
 ![Documentation](https://img.shields.io/badge/Documentation-Complete-success?style=for-the-badge)
@@ -53,11 +45,11 @@ https://api.w3saas.io/v1
 
 | Code | Description |
 |------|-------------|
-| 200  | Success     |
-| 204  | Success (No Content) |
-| 400  | Bad Request |
-| 404  | Not Found   |
-| 500  | Internal Server Error |
+| 200  | ✅ Success     |
+| 204  | ✅ Success (No Content) |
+| 400  | ❌ Bad Request |
+| 404  | ❌ Not Found   |
+| 500  | ❌ Internal Server Error |
 
 ## ⚙️ Rate Limiting
 
@@ -65,7 +57,7 @@ The API implements payload size limits through the `EXPRESS_MAX_PAYLOAD` environ
 
 ## 🔗 Endpoints
 
-### General
+### 🔍 General
 
 #### Welcome Endpoint
 ```http
@@ -130,7 +122,7 @@ Creates and initializes a new agent with the provided configuration.
 
 ---
 
-### Agent Management
+### 🤖 Agent Management
 
 #### List All Agents
 ```http
@@ -197,8 +189,8 @@ Deletes/stops a specific agent.
 - `agentId` (path) - UUID of the agent
 
 **Response**:
-- Success: 204 No Content
-- Error: 404 Not Found if agent doesn't exist
+- ✅ Success: 204 No Content
+- ❌ Error: 404 Not Found if agent doesn't exist
 
 ---
 
@@ -252,7 +244,7 @@ Stops a running agent.
 
 ---
 
-### Messaging
+### 💬 Messaging
 
 #### Send Message to Agent
 ```http
@@ -285,7 +277,7 @@ Sends a message to a specific agent.
 
 ---
 
-### Memory Management
+### 🧠 Memory Management
 
 #### Get Agent Memories
 ```http
@@ -398,25 +390,18 @@ All error responses follow a consistent format:
 ```
 
 Example error scenarios:
-- Agent not found: 404 Not Found
-- Invalid payload: 400 Bad Request
-- Server error: 500 Internal Server Error
-
-<!-- 
-██╗  ██╗███████╗██████╗ ███████╗██████╗  █████╗     ██╗    ██╗██████╗ ███████╗ █████╗  █████╗ ███████╗
-██║  ██║██╔════╝██╔══██╗██╔════╝██╔══██╗██╔══██╗    ██║    ██║╚════██╗██╔════╝██╔══██╗██╔══██╗██╔════╝
-███████║█████╗  ██║  ██║█████╗  ██████╔╝███████║    ██║ █╗ ██║ █████╔╝███████╗███████║███████║███████╗
-██╔══██║██╔══╝  ██║  ██║██╔══╝  ██╔══██╗██╔══██║    ██║███╗██║██╔═══╝ ╚════██║██╔══██║██╔══██║╚════██║
-██║  ██║███████╗██████╔╝███████╗██║  ██║██║  ██║    ╚███╔███╔╝███████╗███████║██║  ██║██║  ██║███████║
-╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝     ╚══╝╚══╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
-                                                                                                       
--->
+- 🚫 Agent not found: 404 Not Found
+- 🚫 Invalid payload: 400 Bad Request
+- 🚫 Server error: 500 Internal Server Error
 
 <div align="center">
+  <br/>
+  <img src="https://img.shields.io/badge/W3%20SaaS-Technologies-black?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMSAxNy45M2MtMy45NS0uNDktNy0zLjg1LTctNy45MyAwLS42Mi4wOC0xLjIxLjIxLTEuNzlMOSAxNXY3LjkzMnptNi45LTJoLTEuMzk2VjhINy4wODdWNi4yOTNjMC0uMzU2LjI4NS0uNjI1LjY0My0uNjI1aDE2LjM1MmMuMzU4IDAgLjY0My4yNy42NDMuNjI1VjE3YzAgLjM1Ni0uMjg1LjYyNS0uNjQzLjYyNWgtMS4xMDV2LTQuMzc1aC0yLjA0NlYxOHptLjQtOGgtMi4zOTZ2LTJIMTcuOXYyeiIvPjwvc3ZnPg==" alt="W3 SaaS Technologies" width="300"/>
   
-## Need Support?
+  ## 📞 Need Support?
 
-[Contact Support](mailto:support@w3saas.io) | [API Status](https://status.w3saas.io) | [Documentation](https://docs.w3saas.io)
+  <a href="https://www.linkedin.com/company/w3-saas-technologies/posts/?feedView=all" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Contact%20Us-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Contact"/></a>
+  <a href="https://github.com/W3-SaaS/Hedera-AI-Smart-Wallet/blob/main/README.md" target="_blank"><img src="https://img.shields.io/badge/GitHub-Documentation-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Docs"/></a>
 
-<p>Built with ❤️ by the W3-SaaS team</p>
+  <p>Built with ❤️ by the W3-SaaS team</p>
 </div>
