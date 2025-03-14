@@ -65,8 +65,8 @@ pnpm start
 ### CryptoHerald
 
 <div align="center">
-  <img src="./images/cryptoherald-screenshot1.jpg" alt="CryptoHerald in action" width="50%">
-  <img src="./images/cryptoherald-screenshot2.jpg" alt="CryptoHerald in action" width="50%">
+  <img src="./images/cryptoherald-screenshot1.jpg" alt="CryptoHerald in action" width="80%">
+  <img src="./images/cryptoherald-screenshot2.jpg" alt="CryptoHerald in action" width="80%">
 </div>
 
 The CryptoHerald agent combines CoinMarketCap and Hedera plugins to deliver real-time cryptocurrency price updates:
