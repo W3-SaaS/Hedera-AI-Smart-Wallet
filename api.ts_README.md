@@ -20,18 +20,42 @@ All endpoints are relative to the base API URL.
 - **Request Body**:
 ```json
 {
-    "characterPath": "path_to_character_file",
-    "characterJson": "character_configuration_json"
+  "characterJson": {
+    "name": "AgentName",
+    "username": "agent_username",
+    "system": "Agent system prompt",
+    "bio": ["Agent biography"],
+    "lore": ["Agent background information"],
+    "modelProvider": "google",
+    "settings": {
+      "voice": {
+        "model": "eleven_multilingual_v2"
+      }
+    }
+  }
 }
+
 ```
 - **Response**: JSON object containing the started agent details
 ```json
 {
-    "id": "character_id",
-    "character": {
-        // character configuration
+  "id": "9c321604-e69e-0e4c-ab84-bec6fd6baf92",
+  "character": {
+    "id": "9c321604-e69e-0e4c-ab84-bec6fd6baf92",
+    "name": "AgentName",
+    "username": "agent_username",
+    "system": "Agent system prompt",
+    "bio": ["Agent biography"],
+    "lore": ["Agent background information"],
+    "modelProvider": "google",
+    "settings": {
+      "voice": {
+        "model": "eleven_multilingual_v2"
+      }
     }
+  }
 }
+
 ```
 
 ### Agent Management
@@ -41,13 +65,13 @@ All endpoints are relative to the base API URL.
 - **Response**: JSON object containing array of agents with their details
 ```json
 {
-    "agents": [
-        {
-            "id": "uuid",
-            "name": "agent_name",
-            "clients": ["client1", "client2"]
-        }
-    ]
+  "agents": [
+    {
+      "id": "9c321604-e69e-0e4c-ab84-bec6fd6baf92",
+      "name": "AgentName",
+      "clients": ["direct"]
+    }
+  ]
 }
 ```
 
@@ -58,11 +82,22 @@ All endpoints are relative to the base API URL.
 - **Response**: JSON object containing agent details
 ```json
 {
-    "id": "uuid",
-    "character": {
-        // character configuration
+  "id": "9c321604-e69e-0e4c-ab84-bec6fd6baf92",
+  "character": {
+    "id": "9c321604-e69e-0e4c-ab84-bec6fd6baf92",
+    "name": "AgentName",
+    "username": "agent_username",
+    "bio": ["Agent biography"],
+    "lore": ["Agent lore"],
+    "modelProvider": "google",
+    "settings": {
+      "voice": {
+        "model": "eleven_multilingual_v2"
+      }
     }
+  }
 }
+
 ```
 
 #### DELETE /agents/:agentId
@@ -72,6 +107,31 @@ All endpoints are relative to the base API URL.
 - **Response**: 
   - Success: Status 204
   - Error: Status 404 if agent not found
+
+### MESSAGE /:agentId/message
+- **Parameters**:
+  - `agentId`: UUID of the agent
+  - `message` : message body
+- **Request Body**:
+```json
+{
+  "text": "User message text",
+  "userId": "12dea96f-ec20-0935-a6ab-75692c994959",
+  "roomId": "default-room-9c321604-e69e-0e4c-ab84-bec6fd6baf92",
+  "userName": "User"
+}
+```  
+- **Response**: 
+  - Success: Status 204
+  - Error: Status 404 if agent not found
+- **Response Body**:
+```json
+  {
+    "text": "Agent response text",
+    "user": "system",
+    "createdAt": 1719823476123
+  }
+```
 
 #### POST /agents/:agentId/set
 - **Description**: Create or update an agent with specific configuration
