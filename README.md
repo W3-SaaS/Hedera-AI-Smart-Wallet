@@ -1,131 +1,142 @@
-# Smart Wallets Backend
+# w3SaaS Smart Wallet - Hedera Agent
 
-This repository contains the backend code for the Smart Wallets project.
+<div align="center">
+  
+![Hedera](https://img.shields.io/badge/Powered%20by-Hedera-3ECF8E?style=for-the-badge&logo=hedera&logoColor=white)
+![Discord](https://img.shields.io/badge/Discord-Integration-5865F2?style=for-the-badge&logo=discord&logoColor=white)
+![ElizaOS](https://img.shields.io/badge/Built%20with-ElizaOS-blue?style=for-the-badge)
 
-## Setup Instructions
+</div>
 
-Follow these steps to set up the project after cloning:
+A powerful AI agent platform built on Hedera's distributed ledger technology, enabling intelligent blockchain interactions through natural language processing.
 
-1. Clone the repository:
+## 📚 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [AI Agents](#ai-agents)
+- [Discord Integration](#discord-integration)
+- [Configuration](#configuration)
+- [API Documentation](#api-documentation)
+
+## 🌟 Overview
+
+The w3SaaS Smart Wallet Hedera Agent provides an intelligent layer on top of blockchain technology, allowing users to interact with Hedera services through intuitive AI-powered interfaces. Built on ElizaOS, it combines conversational AI with secure blockchain operations.
+
+## ✨ Features
+
+- **Natural Language Blockchain Interactions** - Execute complex Hedera operations with simple text or voice commands
+- **Multi-channel Support** - Interact via Discord text channels, voice chat, or direct API calls
+- **Voice Synthesis** - Natural-sounding responses using ElevenLabs integration
+- **Secure Token Management** - Verify and execute token transfers with robust security protocols
+- **Real-time Data Integration** - Access live cryptocurrency prices and market data
+
+## 🚀 Quick Start
+
 ```bash
+# Clone the repository
 git clone https://github.com/W3-SaaS/Hedera-AI-Smart-Wallet.git
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 cd eliza
 pnpm install
-```
 
-3. Set up environment variables:
-```bash
-cp eliza/.env.example eliza/.env
-# Edit the .env file with your API keys and configuration
-```
+# Configure environment
+cp .env.example .env
+# Edit .env with your API keys and configuration
 
-4. Start the agent:
-```bash
-cd eliza
+# Build and launch
 pnpm build
 pnpm start
 ```
 
-## API Documentation
+## 🤖 AI Agents
 
-The project provides a comprehensive REST API for managing AI agents and their interactions. The API supports:
+### CryptoHerald
 
-- Agent creation and management
-- Message handling
-- Memory retrieval
-- Storage operations
+<div align="center">
+  <img src="./images/cryptoherald-screenshot1.jpg" alt="CryptoHerald in action" width="45%">
+  <img src="./images/cryptoherald-screenshot2.jpg" alt="CryptoHerald in action" width="45%">
+</div>
 
-For detailed API documentation including all available endpoints, request/response formats, and examples, please refer to the [API Documentation](api.ts_README.md).
+The CryptoHerald agent combines CoinMarketCap and Hedera plugins to deliver real-time cryptocurrency price updates:
 
-## Characters
-
-The project includes several specialized AI characters, each with unique capabilities:
-
-### CryptoHerald (Bitcoin Price Poster)
-
-![CryptoHerald in action](./images/cryptoherald-screenshot1.jpg)
-![CryptoHerald in actionn](./images/cryptoherald-screenshot2.jpg)
-
-This character combines the CoinMarketCap and Hedera plugins to:
-- Fetch real-time Bitcoin prices using the CoinMarketCap API
-- Post price updates to a specified Hedera topic (0.0.5683001)
-- Respond to voice and text commands in Discord
-
-**Key Features:**
-- Seamless integration with CoinMarketCap for accurate price data
-- Automatic posting to Hedera's distributed ledger for immutable price records
-- Voice-enabled interactions using ElevenLabs for natural speech synthesis
-- Responds to various price check commands like "What's the Bitcoin price today?" or "Check BTC price"
-
-**Technical Integration:**
-- Uses the `GET_PRICE` action to fetch cryptocurrency prices
-- Uses the `HEDERA_SUBMIT_TOPIC_MESSAGE` action to post data to Hedera
-- Configured with both Discord client and voice capabilities
+- Fetches live Bitcoin prices via CoinMarketCap API
+- Records price data immutably on Hedera's distributed ledger
+- Responds to diverse price check commands in text and voice
+- Publishes updates to dedicated Hedera topics
 
 ### Hedera Token Distributor
 
-![Token Distributor in action](./images/token-distributor-screenshot.png)
+<div align="center">
+  <img src="./images/token-distributor-screenshot.png" alt="Token Distributor in action" width="70%">
+</div>
 
-A specialized agent that securely distributes tokens to users upon verification:
+A specialized agent handling secure token distribution with a rigorous verification workflow:
 
-**Key Features:**
-- Secure token distribution requiring secret code verification
-- Transfers exactly 10 tokens of a specified token ID (0.0.5678021)
-- Implements a strict verification workflow before executing transfers
-- Voice-enabled interactions in Discord
-
-**Security Workflow:**
-1. Prompts users for account ID and secret code
-2. Verifies the secret code without ever revealing it
-3. Only proceeds with transfers after successful verification
-4. Uses the `TRANSFER_TOKEN` action for secure token transfers
+- Verifies user identity through secure code validation
+- Manages precise token transfers (10 tokens per verified request)
+- Implements multi-step security protocols before execution
+- Provides voice-enabled verification and confirmation
 
 ### HederaHelper
 
-![HederaHelper in action](./images/hederahelper-screenshot.jpg)
+<div align="center">
+  <img src="./images/hederahelper-screenshot.jpg" alt="HederaHelper in action" width="70%">
+</div>
 
-A comprehensive Hedera blockchain assistant:
+A comprehensive Hedera operations assistant supporting:
 
-**Key Features:**
-- Provides information about Hedera services (HTS, HCS)
-- Executes various Hedera-related operations
-- Handles token management, topic messaging, and balance inquiries
+- Token management (balances, minting, association)
+- HBAR balance inquiries
+- Hedera Consensus Service (HCS) topic creation and messaging
+- Detailed information about Hedera services and capabilities
 
-**Supported Operations:**
-- Token balance checks (`HEDERA_HTS_BALANCE`)
-- HBAR balance inquiries (`HEDERA_HBAR_BALANCE`)
-- Token airdrops (`HEDERA_AIRDROP_TOKEN`)
-- Token association/dissociation (`HEDERA_ASSOCIATE_TOKEN`, `HEDERA_DISSOCIATE_TOKEN`)
-- HCS topic management (`HEDERA_CREATE_TOPIC`, `HEDERA_DELETE_TOPIC`)
-- Topic messaging (`HEDERA_SUBMIT_TOPIC_MESSAGE`, `HEDERA_GET_TOPIC_MESSAGES`)
-- Token minting (`HEDERA_MINT_TOKEN`)
+## 🎮 Discord Integration
 
-## Discord Integration
+<div align="center">
+  <img src="./images/discord-setup-screenshot.PNG" alt="Discord Bot Setup" width="70%">
+</div>
 
-![Discord Bot Setup](./images/discord-setup-screenshot.PNG)
+Seamlessly interact with all agents through a fully integrated Discord bot:
 
-The project includes a fully integrated Discord bot that allows users to interact with all characters through both text and voice channels. The Discord integration features:
+- Natural voice conversations in Discord voice channels
+- Precise text command support
+- High-quality voice synthesis via ElevenLabs
+- Accurate voice command recognition with OpenAI transcription
 
-- Voice channel support for natural conversations
-- Text commands for precise interactions
-- ElevenLabs voice synthesis for natural-sounding responses
-- OpenAI transcription for accurate voice command processing
+## ⚙️ Configuration
 
-## Environment Variables
+Required environment variables:
 
-The following environment variables are required:
+```
+DISCORD_API_TOKEN=your-discord-bot-token
+DISCORD_APPLICATION_ID=your-discord-application-id
+COINMARKETCAP_API_KEY=your-coinmarketcap-api-key
+HEDERA_PRIVATE_KEY=your-hedera-account-private-key
+HEDERA_ACCOUNT_ID=your-hedera-account-id
+HEDERA_NETWORK_TYPE=testnet-or-mainnet
+ELEVENLABS_XI_API_KEY=your-elevenlabs-api-key
+```
 
-- `DISCORD_API_TOKEN`: Your Discord bot token
-- `DISCORD_APPLICATION_ID`: Your Discord application ID
-- `COINMARKETCAP_API_KEY`: Your CoinMarketCap API key
-- `HEDERA_PRIVATE_KEY`: Your Hedera account private key
-- `HEDERA_ACCOUNT_ID`: Your Hedera account ID
-- `HEDERA_NETWORK_TYPE`: Network type (testnet, mainnet)
-- `ELEVENLABS_XI_API_KEY`: Your ElevenLabs API key for voice synthesis
+See `.env.example` for a complete list of configuration options.
 
-See the `.env.example` file for a complete list of environment variables.
+## 📘 API Documentation
+
+The platform exposes a comprehensive REST API for programmatic access to all agent capabilities:
+
+- Agent creation and management
+- Message handling and processing
+- Memory and context management
+- Storage operations
+
+For detailed API specifications including endpoints, request/response formats, and examples, see the [API Documentation](api.ts_README.md).
+
+---
+
+<div align="center">
+  <p>Built with ❤️ by the W3-SaaS team</p>
+  <p>Powered by <a href="https://elizaos.github.io/eliza/docs/intro/">ElizaOS</a> and <a href="https://hedera.com/">Hedera</a></p>
+</div>
 
