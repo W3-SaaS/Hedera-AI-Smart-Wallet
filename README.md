@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![W3 SaaS - Your Key to Web3](./images/repocover.png.png)
+![W3 SaaS - Your Key to Web3](./images/repocover.png)
   
 ![Hedera](https://img.shields.io/badge/Powered%20by-Hedera-3ECF8E?style=for-the-badge&logo=hedera&logoColor=white)
 ![Discord](https://img.shields.io/badge/Discord-Integration-5865F2?style=for-the-badge&logo=discord&logoColor=white)
