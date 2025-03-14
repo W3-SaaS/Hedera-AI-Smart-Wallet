@@ -1,4 +1,4 @@
-# w3SaaS Smart Wallet - Hedera Agent
+# W3 SaaS Smart Wallet - Hedera Agent
 
 <div align="center">
 
