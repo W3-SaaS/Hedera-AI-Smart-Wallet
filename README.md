@@ -92,7 +92,7 @@ A specialized agent handling secure token distribution with a rigorous verificat
 ### HederaHelper
 
 <div align="center">
-  <img src="./images/hederahelper-screenshot.jpg" alt="HederaHelper in action" width="70%">
+  <img src="./images/hederahelper-screenshot.jpg" alt="HederaHelper in action" width="90%">
 </div>
 
 A comprehensive Hedera operations assistant supporting:
@@ -105,7 +105,7 @@ A comprehensive Hedera operations assistant supporting:
 ## 🎮 Discord Integration
 
 <div align="center">
-  <img src="./images/discord-setup-screenshot.PNG" alt="Discord Bot Setup" width="70%">
+  <img src="./images/discord-setup-screenshot.PNG" alt="Discord Bot Setup" width="50%">
 </div>
 
 Seamlessly interact with all agents through a fully integrated Discord bot:
