@@ -1,6 +1,7 @@
 # w3SaaS Smart Wallet - Hedera Agent
 
 <div align="center">
+  <img src="./repocover.png" alt="W3 SaaS - Your Key to Web3" width="100%">
   
 ![Hedera](https://img.shields.io/badge/Powered%20by-Hedera-3ECF8E?style=for-the-badge&logo=hedera&logoColor=white)
 ![Discord](https://img.shields.io/badge/Discord-Integration-5865F2?style=for-the-badge&logo=discord&logoColor=white)
@@ -31,6 +32,13 @@ The w3SaaS Smart Wallet Hedera Agent provides an intelligent layer on top of blo
 - **Voice Synthesis** - Natural-sounding responses using ElevenLabs integration
 - **Secure Token Management** - Verify and execute token transfers with robust security protocols
 - **Real-time Data Integration** - Access live cryptocurrency prices and market data
+
+## 🔧 Version Requirements
+
+- Node.js: v23.3.0
+- pnpm: v10.6.3
+- Python: 3.x
+- Ubuntu: 22.04 LTS (recommended)
 
 ## 🚀 Quick Start
 
