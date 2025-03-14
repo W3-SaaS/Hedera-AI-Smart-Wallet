@@ -30,6 +30,17 @@ pnpm build
 pnpm start
 ```
 
+## API Documentation
+
+The project provides a comprehensive REST API for managing AI agents and their interactions. The API supports:
+
+- Agent creation and management
+- Message handling
+- Memory retrieval
+- Storage operations
+
+For detailed API documentation including all available endpoints, request/response formats, and examples, please refer to the [API Documentation](api.ts_README.md).
+
 ## Characters
 
 The project includes several specialized AI characters, each with unique capabilities:
